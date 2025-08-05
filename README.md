@@ -48,7 +48,7 @@ A powerful **Visual Studio Code extension** that analyzes the algorithmic comple
 
 ## 📦 Installation
 
-Search for **`Algorithm Complexity Analyzer`** in the [VS Code Marketplace](https://marketplace.visualstudio.com/) and click **Install**.
+Search for **`Algorithm Complexity Analyzer`** in the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=mkswebs.algorithm-complexity-analyzer) and click **Install**.
 
 ---
 
