@@ -72,7 +72,7 @@ Search for **`Algorithm Complexity Analyzer`** in the [VS Code Marketplace](http
 ## 📣 Contribute
 
 Pull requests and feature suggestions are welcome!  
-Head to the [GitHub repo](https://github.com/yourusername/algorithm-complexity-analyzer) to get started.
+Head to the [GitHub repo](https://github.com/mx0m/algo-complexity-analyzer) to get started.
 
 ---
 
