@@ -94,4 +94,4 @@ Head to the [GitHub repo](https://github.com/mx0m/algo-complexity-analyzer) to g
 
 ## 📝 License
 
-MIT License © 2025 [Your Name / Org]
+MIT License © 2025 
