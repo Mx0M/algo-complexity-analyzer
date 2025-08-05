@@ -1,0 +1,162 @@
+{
+  "name": "algorithm-complexity-analyzer",
+  "displayName": "algorithm-complexity-analyzer",
+  "description": "Analyze algorithmic complexity of your code with visual graphs and detailed reports",
+  "version": "0.0.1",
+  "publisher": "mkswebs",
+  "repository": "https://github.com/Mx0M/algo-complexity-analyzer.git",
+  "icon": "assets/main_icon.png",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "algorithm",
+    "complexity",
+    "big-o",
+    "performance",
+    "analysis",
+    "rust",
+    "wasm"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:python",
+    "onLanguage:java",
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:rust"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "complexityAnalyzer.analyzeFile",
+        "title": "Analyze Complexity",
+        "category": "Algorithm Analyzer",
+        "icon": "$(graph)"
+      },
+      {
+        "command": "complexityAnalyzer.analyzeSelection",
+        "title": "Analyze Selected Code",
+        "category": "Algorithm Analyzer",
+        "icon": "$(selection)"
+      },
+      {
+        "command": "complexityAnalyzer.showReport",
+        "title": "Show Complexity Report",
+        "category": "Algorithm Analyzer",
+        "icon": "$(report)"
+      },
+      {
+        "command": "complexityAnalyzer.exportReport",
+        "title": "Export Report",
+        "category": "Algorithm Analyzer",
+        "icon": "$(export)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "complexityAnalyzer.analyzeSelection",
+          "when": "editorTextFocus && editorHasSelection",
+          "group": "1_modification@1"
+        },
+        {
+          "command": "complexityAnalyzer.analyzeFile",
+          "when": "editorTextFocus",
+          "group": "1_modification@2"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "complexityAnalyzer.analyzeFile",
+          "when": "resourceExtname =~ /\\.(js|ts|py|java|c|cpp|rs)$/",
+          "group": "navigation@1"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "complexityAnalyzer.analyzeFile",
+          "when": "resourceExtname =~ /\\.(js|ts|py|java|c|cpp|rs)$/",
+          "group": "7_modification"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "complexityAnalyzer",
+          "title": "Algorithm Complexity",
+          "icon": "$(graph)"
+        }
+      ]
+    },
+    "views": {
+      "complexityAnalyzer": [
+        {
+          "type": "webview",
+          "id": "complexityAnalyzer.report",
+          "name": "Complexity Report",
+          "when": "complexityAnalyzer.hasResults"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Algorithm Complexity Analyzer",
+      "properties": {
+        "complexityAnalyzer.autoAnalyze": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically analyze files when opened"
+        },
+        "complexityAnalyzer.showInlineDecorations": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show complexity decorations inline in the editor"
+        },
+        "complexityAnalyzer.maxFileSize": {
+          "type": "number",
+          "default": 100000,
+          "description": "Maximum file size in characters to analyze"
+        },
+        "complexityAnalyzer.theme": {
+          "type": "string",
+          "enum": [
+            "light",
+            "dark",
+            "auto"
+          ],
+          "default": "auto",
+          "description": "Theme for complexity visualizations"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.2.0",
+    "@types/vscode": "^1.102.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "chart.js": "^4.2.1",
+    "d3": "^7.8.2"
+  }
+}

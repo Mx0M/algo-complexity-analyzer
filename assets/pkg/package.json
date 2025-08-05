@@ -1,0 +1,11 @@
+{
+  "name": "big-o-analyser",
+  "version": "0.1.0",
+  "files": [
+    "big_o_analyser_bg.wasm",
+    "big_o_analyser.js",
+    "big_o_analyser.d.ts"
+  ],
+  "main": "big_o_analyser.js",
+  "types": "big_o_analyser.d.ts"
+}
