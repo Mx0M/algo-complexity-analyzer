@@ -84,7 +84,18 @@ Color-coded complexity for quick visual understanding:
 | `O(n!)`      | ⚫ Black   | Only for Tiny Inputs |
 
 ---
+## 🛠 Usage
 
+1. **Open a file** in any supported language _(JavaScript, Python, C++, etc.)_
+2. **Select code** (optional) or leave it unselected to analyze the entire file.
+3. **Click the extension icon** labeled **"Complexity Analyzer"** from the activity bar or title bar.
+4. The **analysis report** will be generated in the **panel below**, showing complexity metrics, graphs, and detailed explanations.
+
+📊 **Example Report Panel:**
+
+![Algorithm Complexity Report Panel](./assets/report-example.png)
+
+---
 ## 📣 Contribute
 
 Pull requests and feature suggestions are welcome!  
