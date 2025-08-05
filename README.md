@@ -65,7 +65,6 @@ Search for **`Algorithm Complexity Analyzer`** in the [VS Code Marketplace](http
 
 - 🦀 [Rust](https://www.rust-lang.org/)
 - 🧩 [WebAssembly](https://webassembly.org/)
-- 🌐 [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) for multi-language parsing
 
 ---
 ## 🎨 Complexity Color Coding
