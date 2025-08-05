@@ -68,6 +68,23 @@ Search for **`Algorithm Complexity Analyzer`** in the [VS Code Marketplace](http
 - 🌐 [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) for multi-language parsing
 
 ---
+## 🎨 Complexity Color Coding
+
+Color-coded complexity for quick visual understanding:
+
+| Complexity   | Color      | Performance        |
+|--------------|------------|--------------------|
+| `O(1)`       | 🟢 Green   | Excellent          |
+| `O(log n)`   | 🟢 Teal    | Very Good          |
+| `O(n)`       | 🟡 Yellow  | Good               |
+| `O(n log n)` | 🟠 Orange  | Acceptable         |
+| `O(n²)`      | 🔴 Red     | Poor               |
+| `O(n³)`      | 🟣 Purple  | Very Poor          |
+| `O(n^k)`     | 🟡 Pink    | Extremely Poor     |
+| `O(2ⁿ)`      | ⚫ Dark Gray | Unacceptable     |
+| `O(n!)`      | ⚫ Black   | Only for Tiny Inputs |
+
+---
 
 ## 📣 Contribute
 
